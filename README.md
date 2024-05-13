@@ -1,15 +1,15 @@
-# Elysia with Bun runtime
+powershell -c "irm bun.sh/install.ps1 | iex"
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
-```
+bun --version
 
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
+bun create elysia bun-api
 
-Open http://localhost:3000/ with your browser to see the result.
+bun dev
+
+bun add prisma@5.13.0 --save-dev
+
+bunx prisma init
+
+bunx prisma migrate dev --name posts
+
+bun add @prisma/client@5.13.0
